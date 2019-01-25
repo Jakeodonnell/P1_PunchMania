@@ -1,0 +1,203 @@
+/* Author Marcus Nordström */
+:root {
+	--main-bg-color: #0A0A0A;
+	--main-text-color: #3F3F3F;
+	--main-highlight-color: #FF0000;
+}
+body {
+	font-family: 'Press Start 2P', cursive !important;
+	background-color: var(--main-bg-color) !important;
+}
+a {
+	color: inherit !important;
+	text-decoration: inherit !important;
+	cursor: pointer;
+}
+h1, h2, h3, td, label {
+	color: var(--main-text-color) !important;
+}
+p {
+	color: var(--main-text-color);
+}
+h2 {
+	font-size: 1.9em !important;
+}
+button {
+	color: var(--main-highlight-color);
+	background-color: var(--main-text-color);
+	cursor: pointer;
+}
+.pageScroll h1 {
+	cursor: pointer;
+}
+.hidden {
+	display: none !important;
+}
+.modal {
+	background-color: var(--main-bg-color);
+}
+.modal p {
+	color: white;
+}
+#tos {
+	color: lightgray !important;
+}
+.header {
+	display: flex;
+	height: 10vh;
+	text-align: center;
+}
+.header .title{
+	color: var(--main-highlight-color) !important;
+	line-height: 10vh;
+}
+.header .title a {
+	cursor: url("https://ddwap.mah.se/ah7115/punchmania/images/logo48.png") 0 0, auto;
+}
+.info {
+	text-align: center;
+	height: 25vh;
+}
+#info {
+	height: 15vh;
+}
+.info .title, .hs .title, .q .title {
+	color: var(--main-highlight-color) !important;
+	line-height: 10vh;
+	display: none;
+}
+.info .title a, .hs .title a, .q .title a {
+	cursor: url("https://ddwap.mah.se/ah7115/punchmania/images/logo48.png") 0 0, auto;
+}
+.info h3 {
+	word-break: break-word;
+}
+.info .name {
+	margin-bottom: 2vh;
+}
+.info button {
+	margin: 2vh;
+}
+.bgImg {
+	width: 90vmin;
+	height: 90vmin;
+	margin: auto;
+	display: none;
+}
+.info input[type="text"], .info input[type="password"], .info input[type="submit"] {
+	width: 50vw;
+	color: red;
+	margin-bottom: 2vh;
+	background-color: var(--main-text-color);
+}
+.hs, .q {
+	height: 62vh;
+	text-align: center;
+}
+.hs button {
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 1vh;
+}
+.list {
+	margin-top: 3vh;
+}
+.list h2 {
+	text-align: center;
+}
+.list table {
+	margin-right: auto;
+	margin-left: auto;
+}
+.list tbody {
+	display: block;
+	width: inherit;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-moz-appearance: menuimage;
+}
+.hs tbody {
+	height: 44vh;
+}
+.q tbody {
+	height: 50vh;
+}
+.list td {
+	padding-left: 1vmax;
+	padding-right: 1vmax;
+}
+#hsF {
+	display: none;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.pageScroll {
+	z-index: 100 !important;
+	display: none;
+}
+@media screen and (max-width: 1024px) {
+	.header {
+		display: none !important;
+	}
+	.info {
+		height: 100vh;
+	}
+	.info .title, .hs .title, .q .title {
+		display: block;
+	}
+	.hs, .q {
+		height: 100vh;
+	}
+	.list tbody {
+		height: 70vh;
+	}
+	.info input[type="text"], .info input[type="password"], .info input[type="submit"] {
+		width: 75vw;
+	}
+	.bgImg {
+		display: block;
+		z-index: -1;
+		margin: 0;
+	}
+	.info .bgImg {
+		position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		opacity: 0.5;
+    filter: alpha(opacity=50);
+	}
+	.hs .bgImg {
+		width: auto;
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		opacity: 0.2;
+    filter: alpha(opacity=20);
+	}
+	.q .bgImg {
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		opacity: 0.2;
+    filter: alpha(opacity=20);
+	}
+	.pageScroll {
+		display: block;
+	}
+	.uparrow {
+		position: fixed;
+		top: 75%;
+		left: 90%;
+		z-index: 100 !important;
+	}
+	.downarrow {
+		position: fixed;
+		top: 85%;
+		left: 90%;
+		z-index: 100 !important;
+	}
+}
